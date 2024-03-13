@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import WasteHeroDataDisplay from './WasteHeroDataDisplay';
-import '../css/WasteHeroDataFetcher.css'; 
+import '../css/WasteHeroDataFetcher.css';
 
 const WasteHeroDataFetcher = () => {
   const [fromDate, setFromDate] = useState('');
   const [toDate, setToDate] = useState('');
   const [apiKey, setApiKey] = useState('');
   const [data, setData] = useState(null);
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,6 +23,7 @@ const WasteHeroDataFetcher = () => {
       }
       const responseData = await response.json();
       setData(responseData);
+      setFormSubmitted(true);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -49,7 +51,7 @@ const WasteHeroDataFetcher = () => {
         <br />
         <button type="submit">Submit</button>
       </form>
-      <WasteHeroDataDisplay data={data} />
+      {formSubmitted && <WasteHeroDataDisplay data={data} />} {/* Render WasteHeroDataDisplay only when form is submitted */}
     </div>
   );
 };
