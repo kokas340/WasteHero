@@ -7,7 +7,7 @@ function HomePage() {
     <>
       <Navbar />
 
-      <div>Waste Calander</div>
+     
       <WasteHeroDataFetcher />
     </>
 

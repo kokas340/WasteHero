@@ -1,6 +1,5 @@
 .waste-hero-data-fetcher {
-    max-width: 500px;
-    margin: 0 auto;
+    margin: 10px;
     padding: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
@@ -16,9 +15,18 @@
     margin-bottom: 10px;
   }
   
+  .waste-hero-data-fetcher .date-inputs {
+    display: flex;
+    justify-content: space-between; /* Ensure inputs are evenly spaced */
+  }
+  
+  .waste-hero-data-fetcher .date-inputs label {
+    width: 48%; /* Adjust the width to leave some space between inputs */
+  }
+  
   .waste-hero-data-fetcher form input[type="date"],
   .waste-hero-data-fetcher form input[type="text"] {
-    width: 100%;
+    width: 100%; /* Adjusted width for better responsiveness */
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;

@@ -31,15 +31,16 @@ const WasteHeroDataFetcher = () => {
     <div className="waste-hero-data-fetcher">
       <h2>Fetch WasteHero Data</h2>
       <form onSubmit={handleSubmit}>
-        <label>
-          From Date:
-          <input type="date" value={fromDate} onChange={(e) => setFromDate(e.target.value)} required />
-        </label>
-        <br />
-        <label>
-          To Date:
-          <input type="date" value={toDate} onChange={(e) => setToDate(e.target.value)} required />
-        </label>
+        <div className="date-inputs">
+          <label>
+            From Date:
+            <input type="date" value={fromDate} onChange={(e) => setFromDate(e.target.value)} required />
+          </label>
+          <label>
+            To Date:
+            <input type="date" value={toDate} onChange={(e) => setToDate(e.target.value)} required />
+          </label>
+        </div>
         <br />
         <label>
           API Key:
@@ -52,5 +53,6 @@ const WasteHeroDataFetcher = () => {
     </div>
   );
 };
+
 
 export default WasteHeroDataFetcher;

@@ -1,5 +1,7 @@
 import React from 'react';
 import generateICSFile from '../backend/generateICSFile';
+import '../css/WasteHeroDataDisplay.css';
+
 const WasteHeroDataDisplay = ({ data }) => {
   const generateICS = () => {
     generateICSFile(data);
@@ -12,9 +14,8 @@ const WasteHeroDataDisplay = ({ data }) => {
         <>
           {data.map((item, index) => (
             <div className="waste-hero-item" key={index}>
-              <h3>Item {index + 1}</h3>
+              <h4>Item {index + 1}</h4>
               <p><strong>Date:</strong> {item.date}</p>
-              <p><strong>Status:</strong> {item.status}</p>
               {item.container && (
                 <>
                   <p><strong>Container Type:</strong> {item.container.container_type.name}</p>
@@ -27,7 +28,7 @@ const WasteHeroDataDisplay = ({ data }) => {
               )}
             </div>
           ))}
-          <button onClick={generateICS}>Download as .ics</button>
+          <button className="download-button" onClick={generateICS}>Download as .ics</button>
         </>
       ) : (
         <p>Loading...</p>
