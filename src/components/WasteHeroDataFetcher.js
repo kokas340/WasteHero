@@ -1,50 +1,55 @@
-import React, { useState, useEffect } from 'react';
-import '../css/WasteComponent.css'
+import React, { useState } from 'react';
+import WasteHeroDataDisplay from './WasteHeroDataDisplay';
+
 const WasteHeroDataFetcher = () => {
+  const [fromDate, setFromDate] = useState('');
+  const [toDate, setToDate] = useState('');
+  const [apiKey, setApiKey] = useState('');
   const [data, setData] = useState(null);
-  const apiKey = '9f291345-7cd6-4dea-b762-8c83f44b7957';
-  const endpoint = 'https://platform-api.wastehero.io/api-crm-portal/v1/property/UHJvcGVydHlUeXBlOjQ1NDg3Mg==/collection_log?from_date=2024-03-01&to_date=2024-03-31';
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(endpoint, {
-          headers: {
-            'X-Api-Key': apiKey
-          }
-        });
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const endpoint = `https://platform-api.wastehero.io/api-crm-portal/v1/property/UHJvcGVydHlUeXBlOjQ1NDg3Mg==/collection_log?from_date=${fromDate}&to_date=${toDate}`;
+    try {
+      const response = await fetch(endpoint, {
+        headers: {
+          'X-Api-Key': apiKey
         }
-        const responseData = await response.json();
-        setData(responseData);
-      } catch (error) {
-        console.error('Error fetching data:', error);
+      });
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
       }
-    };
-
-    fetchData();
-  }, []);
+      const responseData = await response.json();
+      setData(responseData);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
 
   return (
-    <div className="waste-hero-data-container"> {/* Apply container class */}
-      <h2>Data from WasteHero API:</h2>
-      {data ? (
-        data.map((item, index) => (
-          <div className="waste-hero-item" key={index}> {/* Apply item class */}
-            <h3>Item {index + 1}</h3>
-            <p><strong>Date:</strong> {item.date}</p>
-            <p><strong>Status:</strong> {item.status}</p>
-            <p><strong>Container Type:</strong> {item.container.container_type.name}</p>
-            <p><strong>Waste Fraction:</strong> {item.container.waste_fraction.name}</p>
-            <p><strong>Pickup Setting:</strong> {item.container.pickup_setting.name}</p>
-            {/* Render other properties here as needed */}
-          </div>
-        ))
-      ) : (
-        <p>Loading...</p>
-      )}
+    <div>
+      <h2>Fetch WasteHero Data</h2>
+      <form onSubmit={handleSubmit}>
+        <label>
+          From Date:
+          <input type="date" value={fromDate} onChange={(e) => setFromDate(e.target.value)} required />
+        </label>
+        <br />
+        <label>
+          To Date:
+          <input type="date" value={toDate} onChange={(e) => setToDate(e.target.value)} required />
+        </label>
+        <br />
+        <label>
+          API Key:
+          <input type="text" value={apiKey} onChange={(e) => setApiKey(e.target.value)} required />
+        </label>
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+      <WasteHeroDataDisplay data={data} />
     </div>
   );
 };
+
 export default WasteHeroDataFetcher;
