@@ -9,30 +9,33 @@ const WasteHeroDataDisplay = ({ data }) => {
 
   return (
     <div className="waste-hero-data-container">
-      <h2>Data from WasteHero API:</h2>
-      {data ? (
-        <>
-          {data.map((item, index) => (
-            <div className="waste-hero-item" key={index}>
-              <h4>Item {index + 1}</h4>
-              <p><strong>Date:</strong> {item.date}</p>
-              {item.container && (
+      <div className="header-container">
+        <h2>Data from WasteHero API:</h2>
+        <button className="download-button" onClick={generateICS}>Download as .ics</button>
+      </div>
+      <div className="waste-hero-cards-container">
+        {data ? (
+          data.map((item, index) => (
+            <div className="waste-hero-card" key={index}>
+              <div className='header-container'>
+                <h4> {item.date}</h4>
+                <p># {index + 1}</p>
+              </div>
+              {item.container ? (
                 <>
                   <p><strong>Container Type:</strong> {item.container.container_type.name}</p>
                   <p><strong>Waste Fraction:</strong> {item.container.waste_fraction.name}</p>
                   <p><strong>Pickup Setting:</strong> {item.container.pickup_setting.name}</p>
                 </>
-              )}
-              {!item.container && (
+              ) : (
                 <p><strong>No container information available</strong></p>
               )}
             </div>
-          ))}
-          <button className="download-button" onClick={generateICS}>Download as .ics</button>
-        </>
-      ) : (
-        <p>Loading...</p>
-      )}
+          ))
+        ) : (
+          <p>Loading...</p>
+        )}
+      </div>
     </div>
   );
 };

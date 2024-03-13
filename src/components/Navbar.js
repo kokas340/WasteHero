@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import '../css/Navbar.css';
-import wasteHeroLogo from '../images/wastehero-logo.png'; // Adjust the path as per your project structure
+import wasteHeroLogo from '../images/wastehero-logo.png';
 
 function Navbar() {
     return (

@@ -12,7 +12,7 @@ UID:${index + 1}
 SUMMARY:${item.container.container_type.name} - ${item.container.waste_fraction.name}
 DTSTART;VALUE=DATE:${item.date.replace(/-/g, '')}
 DTEND;VALUE=DATE:${item.date.replace(/-/g, '')}
-DESCRIPTION:Status - ${item.status}
+DESCRIPTION:${item.container.pickup_setting.name}
 END:VEVENT`;
     });
 

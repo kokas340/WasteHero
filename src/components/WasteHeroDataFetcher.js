@@ -51,7 +51,7 @@ const WasteHeroDataFetcher = () => {
         <br />
         <button type="submit">Submit</button>
       </form>
-      {formSubmitted && <WasteHeroDataDisplay data={data} />} {/* Render WasteHeroDataDisplay only when form is submitted */}
+      {formSubmitted && <WasteHeroDataDisplay data={data} />}
     </div>
   );
 };
