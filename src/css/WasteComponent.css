@@ -1,0 +1,22 @@
+.waste-hero-data-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .waste-hero-item {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .waste-hero-item h3 {
+    margin-top: 0;
+  }
+  
+  .waste-hero-item p {
+    margin: 5px 0;
+  }
+  
