@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import WasteHeroDataDisplay from './WasteHeroDataDisplay';
+import '../css/WasteHeroDataFetcher.css'; 
 
 const WasteHeroDataFetcher = () => {
   const [fromDate, setFromDate] = useState('');
@@ -27,7 +28,7 @@ const WasteHeroDataFetcher = () => {
   };
 
   return (
-    <div>
+    <div className="waste-hero-data-fetcher">
       <h2>Fetch WasteHero Data</h2>
       <form onSubmit={handleSubmit}>
         <label>

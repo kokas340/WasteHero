@@ -1,0 +1,42 @@
+.waste-hero-data-fetcher {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .waste-hero-data-fetcher h2 {
+    margin-bottom: 10px;
+  }
+  
+  .waste-hero-data-fetcher form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .waste-hero-data-fetcher form input[type="date"],
+  .waste-hero-data-fetcher form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  .waste-hero-data-fetcher form button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .waste-hero-data-fetcher form button:hover {
+    background-color: #45a049;
+  }
+  

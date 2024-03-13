@@ -1,16 +1,18 @@
 nav {
-    background-color: #333;
-    color: white;
+    background-color: #f2f2f2;
+    color: rgb(43, 43, 43);
+    padding: 1px; /* Added padding for better appearance */
 }
 
 .nav-list {
     list-style: none;
     padding: 0;
     display: flex;
+    align-items: center; /* Align items vertically center */
 }
 
 .nav-list li {
-    margin-right: 10px;
+    margin-right: 20px; /* Increased margin for better spacing */
 }
 
 .nav-list li:last-child {
@@ -19,9 +21,24 @@ nav {
 
 .nav-list a {
     text-decoration: none;
-    color: white;
+    color: rgb(2, 2, 2);
+    font-weight:500;
 }
 
-.nav-list a:hover {
-    text-decoration: underline;
+.nav-list li:hover {
+    text-decoration: solid; 
+    transform: scale(1.12); 
+    transition: transform 0.4s ease; 
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px; /* Adjust the width as per your logo size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 30px;
+    margin-left: 20px; /* Add margin between logo and text */
 }

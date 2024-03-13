@@ -4,11 +4,14 @@ import WasteHeroDataFetcher from '../components/WasteHeroDataFetcher';
 
 function HomePage() {
   return (
-    <div className='container'>
+    <>
       <Navbar />
+
       <div>Waste Calander</div>
       <WasteHeroDataFetcher />
-    </div>
+    </>
+
+
   );
 }
 

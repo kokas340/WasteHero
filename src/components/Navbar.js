@@ -1,27 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import '../css/Navbar.css';
+import wasteHeroLogo from '../images/wastehero-logo.png'; // Adjust the path as per your project structure
 
 function Navbar() {
     return (
         <nav>
             <ul className="nav-list">
                 <li>
+                    <Link to="/" className="logo-container">
+                        <img src={wasteHeroLogo} alt="WasteHero Logo" className="logo" />
+                    </Link>
+                </li>
+                <li>
                     <Link to="/">Home</Link>
                 </li>
-                {
-                    /*
                 <li>
-                    <Link to="/login">Login</Link>
+                    <Link to="/HelpPage">Help</Link>
                 </li>
-                <li>
-                    <Link to="/profile/123">Profile</Link>
-                </li>
-                     */
-                }
-               
-
-
             </ul>
         </nav>
     );
