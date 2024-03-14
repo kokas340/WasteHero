@@ -7,7 +7,7 @@ import HelpPage from './pages/HelpPage';
 
 
 function App() {
-  return (
+  return ( 
     <Router basename='/WasteHero'>
       <Routes>
         <Route path="/" element={<Home/>} />
