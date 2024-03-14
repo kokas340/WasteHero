@@ -12,7 +12,7 @@ const WasteHeroDataFetcher = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const endpoint = `https://platform-api.wastehero.io/api-crm-portal/v1/property/UHJvcGVydHlUeXBlOjQ2MzM4MQ==/collection_log?from_date=${fromDate}&to_date=${toDate}`;
+    const endpoint = `https://platform-api.wastehero.io/api-crm-portal/v1/property/${propertyId}/collection_log?from_date=${fromDate}&to_date=${toDate}`;
     try {
       const response = await fetch(endpoint, {
         headers: {
