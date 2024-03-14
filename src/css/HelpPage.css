@@ -1,0 +1,25 @@
+.help-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.step {
+    margin-bottom: 40px;
+}
+
+.step h2 {
+    color: #333;
+}
+
+.step p {
+    margin-bottom: 10px;
+}
+
+.step img {
+    max-width: 100%;
+    display: block;
+    margin-top: 10px;
+    border: 2px solid #ccc; /* Add border to the images */
+    border-radius: 5px; /* Add border radius for a rounded appearance */
+}

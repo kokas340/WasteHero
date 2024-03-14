@@ -5,13 +5,14 @@ import '../css/WasteHeroDataFetcher.css';
 const WasteHeroDataFetcher = () => {
   const [fromDate, setFromDate] = useState('');
   const [toDate, setToDate] = useState('');
+  const [propertyId, setPropertyId] = useState('');
   const [apiKey, setApiKey] = useState('');
   const [data, setData] = useState(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const endpoint = `https://platform-api.wastehero.io/api-crm-portal/v1/property/UHJvcGVydHlUeXBlOjQ1NDg3Mg==/collection_log?from_date=${fromDate}&to_date=${toDate}`;
+    const endpoint = `https://platform-api.wastehero.io/api-crm-portal/v1/property/UHJvcGVydHlUeXBlOjQ2MzM4MQ==/collection_log?from_date=${fromDate}&to_date=${toDate}`;
     try {
       const response = await fetch(endpoint, {
         headers: {
@@ -44,10 +45,17 @@ const WasteHeroDataFetcher = () => {
           </label>
         </div>
         <br />
-        <label>
-          API Key:
-          <input type="text" value={apiKey} onChange={(e) => setApiKey(e.target.value)} required />
-        </label>
+        <div className="date-inputs">
+          <label>
+            API Key:
+            <input type="text" value={apiKey} onChange={(e) => setApiKey(e.target.value)} required />
+          </label>
+          <label>
+            Property Id:
+            <input type="text" value={propertyId} onChange={(e) => setPropertyId(e.target.value)} required />
+          </label>
+        </div>
+
         <br />
         <button type="submit">Submit</button>
       </form>
