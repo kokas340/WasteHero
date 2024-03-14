@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/kokas340/WasteHero/static/css/main.3bc9ae1e.css",
-    "main.js": "/kokas340/WasteHero/static/js/main.9613d98f.js",
-    "static/js/453.ed3810f9.chunk.js": "/kokas340/WasteHero/static/js/453.ed3810f9.chunk.js",
-    "static/media/step1.png": "/kokas340/WasteHero/static/media/step1.80e1a6c43d3221c373ca.png",
-    "static/media/step2.png": "/kokas340/WasteHero/static/media/step2.29ac76f848976fabb142.png",
-    "static/media/step7.png": "/kokas340/WasteHero/static/media/step7.bb686381e4aae18d4165.png",
-    "static/media/step5.png": "/kokas340/WasteHero/static/media/step5.c0235083a42a4afa4d75.png",
-    "static/media/step4.png": "/kokas340/WasteHero/static/media/step4.0b511c424e72401f14c5.png",
-    "static/media/step3.png": "/kokas340/WasteHero/static/media/step3.68e3aa6d8ca315f089a2.png",
-    "static/media/step10.png": "/kokas340/WasteHero/static/media/step10.c5701fa516097dddaf23.png",
-    "static/media/step11.png": "/kokas340/WasteHero/static/media/step11.ef855bdc135f4c99badf.png",
-    "static/media/step9.png": "/kokas340/WasteHero/static/media/step9.5484a90c22e64e25c0e8.png",
-    "static/media/step8.png": "/kokas340/WasteHero/static/media/step8.a3fc31c247e05081db76.png",
-    "static/media/step6.png": "/kokas340/WasteHero/static/media/step6.f4043617cafa301efd26.png",
-    "static/media/wastehero-logo.png": "/kokas340/WasteHero/static/media/wastehero-logo.417c44f95fd33fed31be.png",
-    "index.html": "/kokas340/WasteHero/index.html",
-    "main.3bc9ae1e.css.map": "/kokas340/WasteHero/static/css/main.3bc9ae1e.css.map",
-    "main.9613d98f.js.map": "/kokas340/WasteHero/static/js/main.9613d98f.js.map",
-    "453.ed3810f9.chunk.js.map": "/kokas340/WasteHero/static/js/453.ed3810f9.chunk.js.map"
+    "main.css": "/WasteHero/static/css/main.3bc9ae1e.css",
+    "main.js": "/WasteHero/static/js/main.1b43ceed.js",
+    "static/js/453.ed3810f9.chunk.js": "/WasteHero/static/js/453.ed3810f9.chunk.js",
+    "static/media/step1.png": "/WasteHero/static/media/step1.80e1a6c43d3221c373ca.png",
+    "static/media/step2.png": "/WasteHero/static/media/step2.29ac76f848976fabb142.png",
+    "static/media/step7.png": "/WasteHero/static/media/step7.bb686381e4aae18d4165.png",
+    "static/media/step5.png": "/WasteHero/static/media/step5.c0235083a42a4afa4d75.png",
+    "static/media/step4.png": "/WasteHero/static/media/step4.0b511c424e72401f14c5.png",
+    "static/media/step3.png": "/WasteHero/static/media/step3.68e3aa6d8ca315f089a2.png",
+    "static/media/step10.png": "/WasteHero/static/media/step10.c5701fa516097dddaf23.png",
+    "static/media/step11.png": "/WasteHero/static/media/step11.ef855bdc135f4c99badf.png",
+    "static/media/step9.png": "/WasteHero/static/media/step9.5484a90c22e64e25c0e8.png",
+    "static/media/step8.png": "/WasteHero/static/media/step8.a3fc31c247e05081db76.png",
+    "static/media/step6.png": "/WasteHero/static/media/step6.f4043617cafa301efd26.png",
+    "static/media/wastehero-logo.png": "/WasteHero/static/media/wastehero-logo.417c44f95fd33fed31be.png",
+    "index.html": "/WasteHero/index.html",
+    "main.3bc9ae1e.css.map": "/WasteHero/static/css/main.3bc9ae1e.css.map",
+    "main.1b43ceed.js.map": "/WasteHero/static/js/main.1b43ceed.js.map",
+    "453.ed3810f9.chunk.js.map": "/WasteHero/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3bc9ae1e.css",
-    "static/js/main.9613d98f.js"
+    "static/js/main.1b43ceed.js"
   ]
 }
