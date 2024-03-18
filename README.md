@@ -12,7 +12,7 @@ This project aims to provide the possibility to integrate your local waste colle
 
 ## Getting Started
 
-To get started with this project, follow these steps:
+To get started with this project, follow these steps or just click on https://kokas340.github.io/WasteHero/
 
 1. Clone the repository:
 
